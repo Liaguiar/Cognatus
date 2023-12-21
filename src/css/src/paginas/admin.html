@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGNATUS</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header class="cabecalho">
+            <img class="logo" src="../imagens/cognatusLogo.png">
+
+            <nav class="cabecalho-menu">
+                        <a class="cabecalho-item" href="../paginas/produtos.html">Produtos</a> 
+                        <a class="cabecalho-item" href="../paginas/login.html">Login</a>  
+                        <a class="cabecalho-item" href="../paginas/cadastro.html">Cadastro</a> 
+            </nav>
+        </header>
+    </div>
+
+<main>
+    
+            <nav>
+                <ul class="nav-pills nav-fill">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#admim"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                      </svg>Deletar Usuários </a>
+                    </li>
+                  </ul>
+            </nav>
+
+    <section class="view-bd">
+        <div class="div-view-bd">
+            <h3 class="fonte">Usuários da Cognatus</h3>
+            <div class="painel">
+                <h2>Lista de Usuarios</h2>
+                <ul id="lista-vendedores"></ul>
+                <table class="styled-table " id="tabelaVendedores" >
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody class="active-row">
+                    
+                    </tbody>
+                </table>
+            </div>
+        
+            <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+    try {
+        const response = await fetch('/vendedrs');
+        const data = await response.json();
+
+        if (data.vendedor && data.vendedor.length > 0) {
+            const tabela = document.getElementById('tabelaVendedores').getElementsByTagName('tbody')[0];
+
+            data.vendedor.forEach((vendedor) => {
+                const newRow = tabela.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+
+                cell1.innerHTML = vendedor.id;
+                cell2.innerHTML = vendedor.nome;
+                cell3.innerHTML = vendedor.email;
+            });
+        } else {
+            console.error('Nenhum vendedor encontrado.');
+        }
+    } catch (error) {
+        console.error('Erro ao obter dados dos vendedores:', error);
+    }
+});
+
+    </script>
+
+            </script>
+        </div>
+    </section>
+    <section id="admim">
+        <div class="div-admim">
+            <form id="admimForm" class="form" action="/deletar" method="post">
+                <h3 class="fonte">Deletar usuário</h3>
+                <label class="label" for="id"> ID do usuário:</label>
+                <input type="text" id="id" name="id" placeholder="ID" required />
+                <br>
+                <br>
+                <button class="botao-deletar" type="submit">Deletar</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById('admimForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = {
+                id: document.getElementById('id').value,
+            };
+
+            try {
+                const response = await fetch('/deletar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const data = await response.json();
+                window.location.href = 'admin.html';
+                console.log('Resposta do servidor:', data);
+
+                // Adicione aqui o que você deseja fazer após a exclusão do usuário
+
+            } catch (error) {
+                console.error('Erro:', error);
+
+                // Adicione aqui o que você deseja fazer em caso de erro
+            }
+        });
+    </script>
+</main>
+</body>
+</html>

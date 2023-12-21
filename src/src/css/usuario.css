@@ -1,0 +1,139 @@
+body{
+    background-color: #380116;
+}
+
+.usuario-sec{
+    margin-top: -3%;
+    height: 700px;
+    width: 100%;
+    background-color: #380116;
+}
+
+.nav-usuario{
+    margin-top: -20vh;
+
+    background-color: #F2FF82;
+    width: 100%;
+    height: 150px;
+}
+
+.ul-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    color: #F2FF82;
+    font-size: 15px;
+    margin-top: 30vh;
+    list-style: none;
+}
+
+.nav-pills.nav-fill{
+    color: #F2FF82;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.nav-link{
+    color: #ffeeda;
+    font-size: 20px;
+    font-family:'Times New Roman';
+}
+
+.div-menu-usuario{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.usuario-menu{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    
+}
+
+
+.ul-menu-usuario{
+    display: flex;
+    color: #380116;
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.div-imgs-usuario{
+    background-color: #380116;
+    margin-top: -14%;
+    width: 100%;
+}
+
+.ul-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    padding: 0;
+}
+  
+.li-usuario {
+    height: 40vh;
+    flex-grow: 1;
+    list-style: none;
+}
+  
+.img-usuario {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+
+
+  .card{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    list-style: none;
+    background-color: #380116;
+    color: white;
+    margin-left: 15px;
+    align-items: center;
+    align-content: space-around;
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+  }
+
+  .card-img-top{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+  }
+
+  .card-title{
+    align-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .btn-primary{
+    background-color: #ffeeda;
+    color: #380116;
+    border-color: aliceblue;
+  }
+
+  .btn-primary:hover{
+    background-color: #380116;
+    color: #ffeeda;
+    border-color: #F2FF82;
+  }

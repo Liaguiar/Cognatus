@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="div-cabecalho">
+        <header class="cabecalho">
+            <img class="logo" src="../imagens/cognatusLogo.png">
+
+            <nav class="cabecalho-menu">
+                <a class="cabecalho-item" href="produtos.html">Produtos</a>
+                <a class="cabecalho-item" href="login.html">Login</a>
+                <a class="cabecalho-item" href="index.html">Início</a>
+            </nav>
+        </header>
+    </div>
+    <section class="cadastro">
+        <div class="div-cadastro">
+            <form id="cadastroForm" class="form" action="/cadasto" method="post">
+                <h3>Cadastro</h3>
+                <label class="label" for="nome"> Nome de usuário: </label>
+                <input type="text" placeholder="nome" id="nome" required />
+                <br>
+                <label for="email"> Email: </label>
+                <input type="text" placeholder="@gmail.com" id="email" required>
+                <br>
+                <label for="senha"> Senha: </label>
+                <input type="text" placeholder="xxxxx" id="senha" required>
+                <br>
+                <button class="botao-cadastrar" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const formData = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        senha: document.getElementById('senha').value,
+    };
+
+    try {
+        const response = await fetch('/cadasto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+        window.location.href = 'login.html';
+        console.log('Resposta do servidor:', data);
+        
+
+        // Adicione aqui o que você deseja fazer após o envio do formulário
+
+    } catch (error) {
+        console.error('Erro:', error);
+
+        // Adicione aqui o que você deseja fazer em caso de erro
+    }
+});
+
+    </script>
+    
+    <footer class="footer">
+
+        <ul class="list-footer">
+            <li>
+                <h3>Fale conosco:</h3>
+            </li>
+            <li> cognatus@gmail.com </li>
+            <li> (31) 98103-5734</li>
+        </ul>
+
+        <ul class="list-footer">
+            <li>
+                <h3>Acompanhe pelas redes sociais:</h3>
+            </li>
+            <li> @cognatus.inc</li>
+            <li> cognatus_inc</li>
+        </ul>
+
+        <div class="list-footer">
+            <iframe class="localizacao"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.1348814543567!2d-43.94097112393752!3d-19.91872013795902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699fb64f3fb07%3A0xfdbaad21df27456c!2sR.%20Rio%20de%20Janeiro%2C%20471%20-%20Centro%2C%20Belo%20Horizonte%20-%20MG%2C%2030160-041!5e0!3m2!1spt-PT!2sbr!4v1702056824739!5m2!1spt-PT!2sbr"
+                style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+</body>
+
+</html>

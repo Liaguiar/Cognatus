@@ -1,0 +1,105 @@
+.cadastro{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    padding: 0;
+
+}
+
+.div-cadastro{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    display: flex;
+    margin-top: 1vh;
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-evenly;
+}
+h3{
+    text-align: center;
+}
+.marca{
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+input{
+    height: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*https://i.pinimg.com/originals/2b/ec/c1/2becc14b05e29791404ee34d6cc26cec.jpg*/
+    background-image: url(https://bijoujewellery.co.uk/cdn/shop/files/new_jewellery.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.75;
+    z-index: -1;
+    height: 100%;
+}
+
+
+
+.form{
+    display: flex;
+    font-family: sans-serif;
+    color: #380116;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: space-evenly;
+    
+}
+
+input{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    background-color:#ffeeda;
+    border-radius: 5px;
+    width: 55vh;
+    height: 4vh;
+    border: 0;
+}
+
+.botao-cadastrar{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    background-color: #380116;
+    color: #fff;
+    border-radius: 5px;
+    height: 4vh;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*https://i.pinimg.com/originals/2b/ec/c1/2becc14b05e29791404ee34d6cc26cec.jpg*/
+    background-image: url(https://bijoujewellery.co.uk/cdn/shop/files/new_jewellery.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.75;
+    z-index: -1;
+    height: 100%;
+}

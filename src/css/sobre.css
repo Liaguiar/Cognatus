@@ -1,0 +1,76 @@
+body{
+    overflow-x: hidden;
+    background-color: #380116;
+}
+.carousel-inner{
+    margin-top:0;
+}
+
+.carousel-div{
+    margin: auto;
+    border-radius: 22px;
+    width: 90vw;
+    box-shadow: 60px -30px gray;
+    margin-top: 100px;
+}
+.img-carousel{
+    height: 500px;
+    width: auto;
+    border-radius: 30px;
+    margin: auto;
+    display: block;
+    
+}
+.principal-carousel{
+    display: flex;
+    background-color:#FFEEDA;
+}
+.text-carousel{
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    margin: auto;
+    font-family: Garamond;
+    color: #380116;
+    
+}
+.img-carousel-item{
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    margin: auto;
+}
+.cards-b{
+    margin-top : 200px;
+    margin-bottom: 100px;
+    width: 80vw;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+hr{
+    height: 100px;
+    width: 100vw;
+    background-color: #FFEEDA;
+    opacity: 1;
+}
+h1{
+    padding-top: 100px;
+    margin: auto;
+    width: 400px;
+    height: 30px;
+    color: aliceblue;
+    font-family: Garamond;
+    font-size: 60px;
+}
+#img-oculta{
+    visibility: hidden;
+    height: 500px;
+}
+.img-carousel{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+

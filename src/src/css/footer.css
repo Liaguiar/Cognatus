@@ -1,0 +1,108 @@
+.footer{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    column-gap: 18%;
+    flex-wrap: wrap;
+    padding: 40px;
+    font-size: 15px;
+}
+
+.list-footer{
+    text-align: center;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+.localizacao{
+    height: 130px ;
+    border-radius: 10px;
+}
+.footer{
+    color: white;
+    background-color: #380116;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
+    
+}
+@media screen and (max-width: 500px) {
+    .list-footer{
+         font-size: 15px;
+         margin: 0%;
+         padding: 0px;
+         justify-content: center;
+         display: flex;
+         flex-direction: column;
+        margin-right: 50px;
+    }
+    .title-list-footer{
+        font-size: 20px;
+    }
+    #map{
+        margin-right:60px;
+    }
+    
+ 
+}
+#footer-diferente{
+    background-color: #FFEEDA;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    column-gap: 18%;
+    flex-wrap: wrap;
+    padding: 40px;
+    font-size: 15px;
+    width: 100vw;
+}
+.list-footer{
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+.localizacao{
+    height: 130px ;
+    border-radius: 10px;
+}
+.footer{
+    color: white;
+    background-color: #380116;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
+    
+}
+@media screen and (max-width: 500px) {
+    .list-footer{
+         font-size: 15px;
+         margin: 0%;
+         padding: 0px;
+         justify-content: center;
+         display: flex;
+         flex-direction: column;
+        margin-right: 50px;
+    }
+    .title-list-footer{
+        font-size: 20px;
+    }
+    #map{
+        margin-right:60px;
+    }
+    
+ 
+}
